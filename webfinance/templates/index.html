@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    My portfolio
+{% endblock %}
+
+{% block style %}
+    table
+    {
+        margin-left: 20px;
+        margin-right: 50px;
+        width: 70%;
+        border: 2px solid black;
+    }
+    th
+    {
+        border: 3px solid black;
+        text-align: center;
+        height: 50px;
+    }
+    td
+    {
+        border: 1px solid black;
+        text-align: left;
+        padding: 5px;
+    }
+{% endblock %}
+
+{% block main %}
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Symbol</th>
+        <th>Shares</th>
+        <th>Current Price in USD</th>
+        <th>Total value</th>
+    </tr>
+        {% for x in portfolio %}
+    <tr>
+        <td>{{ x["name"] }}</td>
+        <td>{{ x["symbol"] }}</td>
+        <td>{{ x["shares"] }}</td>
+        <td>{{ x["price"] }}</td>
+        <td>{{ x["total_value"] }}</td>
+    </tr>
+        {% endfor %}
+
+</table>
+
+<div>Your current cash balance {{ current_cash }}.</div>
+<div>Your grand total {{ grand_total }}.</div>
+
+{% endblock %}
