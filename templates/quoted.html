@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+
+{% block style %}
+    table
+    {
+        margin-left: 20px;
+        margin-right: 50px;
+        width: 70%;
+        border: 2px solid black;
+    }
+    th
+    {
+        border: 3px solid black;
+        text-align: center;
+        height: 50px;
+    }
+    td
+    {
+        border: 1px solid black;
+        text-align: left;
+        padding: 5px;
+    }
+{% endblock %}
+
+{% block main %}
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Price in USD</th>
+        <th>Symbol</th>
+    </tr>
+    <tr>
+        <td>{{ namelook }}</td>
+        <td>{{ pricelook }}</td>
+        <td>{{ symbollook }}</td>
+    </tr>
+</table>
+
+
+{% endblock %}

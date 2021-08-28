@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block style %}
+    table
+    {
+        margin-left: 20px;
+        margin-right: 50px;
+        width: 70%;
+        border: 2px solid black;
+    }
+    th
+    {
+        border: 3px solid black;
+        text-align: center;
+        height: 50px;
+    }
+    td
+    {
+        border: 1px solid black;
+        text-align: left;
+        padding: 5px;
+    }
+{% endblock %}
+
+{% block main %}
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Symbol</th>
+        <th>Shares</th>
+        <th>The Transaction Price in USD</th>
+        <th>Time of the transaction</th>
+    </tr>
+        {% for x in rows %}
+    <tr>
+        <td>{{ x["name"] }}</td>
+        <td>{{ x["symbol"] }}</td>
+        <td>{{ x["shares"] }}</td>
+        <td>{{ x["price"] }}</td>
+        <td>{{ x["time_of_transaction"] }}</td>
+    </tr>
+        {% endfor %}
+
+</table>
+
+{% endblock %}
