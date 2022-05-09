@@ -7,4 +7,4 @@ It was necessary to create a registration page and the login page for the users 
 
 All the pages are stylized in the layout.html.
 
-I use the Flask, Jinja and some help functions provided by CS50 course.
+I use the Python, HTML, CSS, Flask, Jinja and some help functions provided by CS50 course.
